@@ -51,7 +51,7 @@ const franco = new enemy('Franco', 10)
 const goebbels = new enemy('Goebbels', 15)
 const pinochet = new enemy('Pinochet', 20)
 const creatures = [];
-const names = ['goebbels', 'pinochet', 'batista']
+const names = [franco, goebbels, pinochet]
 let i = 0
 
 console.log(fanon)
@@ -108,6 +108,7 @@ const roundOne = () => {
     fanon.fight(franco)
     if (franco.health >= 0) {
         // franco.fight(fanon)
+        franco.fight(fanon)
         huey.fight(franco)
     } if (franco.health <= 0) {
         fanon.gainExp();
@@ -134,31 +135,34 @@ const roundOne = () => {
 
 // find shelter round 2: find shelter, have red pandas fight another enemy, when they defeated an enemy they will gain experience of 5 and they will be able to move on to the last level
 const roundTwo = () => {
-    let begin = document.getElementById('attackButton')
-    begin.style.visibility = 'none'
-    let greeting = document.querySelector('#hello p')
+    let greeting = document.querySelector('.greeting')
     greeting.innerText = ""
+    // let begin = document.getElementById('attackButton')
+    // begin.style.visibility = 'none'
     fanon.fight(goebbels)
     if (goebbels.health >= 0) {
         // franco.fight(fanon)
+        goebbels.fight(huey)
         huey.fight(goebbels)
     } if (goebbels.health <= 0) {
         fanon.gainExp();
         huey.gainExp();
         let hello = document.getElementById('hello');
         let text2 = document.querySelector('#hello p');
-        text2.innerText = 'Alas, safety, we should eat and rest up'
-        // let shelter = document.getElementById('shelterButton')
-        // shelter.style.visibility = 'visible'
+        text2.setAttribute('class', 'round2')
+        text2.innerText = 'Alas, safety! Rest up friend, big day tomorrow. *head to oasis*'
+        let oasis = document.getElementById('oasisButton')
+        oasis.style.visibility = 'visible'
         hello.appendChild(text2)
         showStatsHuey();
         showStatsFanon();
         showStatsEnemy();
     } else {
         let hello = document.getElementById('hello');
-        let text1 = document.createElement('p');
-        text1.innerText = 'We\'ve failed our cause, we must regain our strength'
-        hello.prependChild(text1)
+        let text2 = document.createElement('p');
+        text2.setAttribute('class', 'round2')
+        text2.innerText = 'This one is a lot tougher than the last! Double Team!'
+        hello.appendChild(text2)
         showStatsHuey();
         showStatsFanon();
         showStatsEnemy();
@@ -166,29 +170,44 @@ const roundTwo = () => {
 }
 // round 3: oasis, last enemy, when red pandas reaches experience of 15 they will win the game and live happily ever after
 const roundThree = () => {
-    hello.removeChild(text2)
-    fanon.attack(creatures[0])
-    if (creatures.health > 0) {
-        creatures.attack(fanon)
-        huey.attack(creatures)
-    } if (creatures.health < 0) {
-        gainExp();
+    let greeting = document.querySelector('.round2');
+    // greeting.classList.remove('.round2')
+    greeting.style.visibility = 'hidden';
+    // let begin = document.getElementById('attackButton')
+    // begin.style.visibility = 'none'
+    fanon.fight(pinochet)
+    if (pinochet.health >= 0) {
+        // franco.fight(fanon)
+        pinochet.fight(fanon)
+        huey.fight(pinochet)
+    } if (pinochet.health <= 0) {
+        fanon.gainExp();
+        huey.gainExp();
+        let greeting = document.querySelector('.round2');
+        // greeting.classList.remove('.round2')
+        // greeting.style.display = 'none';
+        greeting.style.visibility = 'none';
+        // greeting.innerText = "";
         let hello = document.getElementById('hello');
-        let text3 = document.createElement('p');
-        text.setAttribute('class', 'roundThree');
-        text.innerText = 'Oasis found! hopefully peace is finally attainable';
-        hello.appendChild(text2)
-        showStatsHuey();
-        showStatsFanon();
-    } else {
-        let hello = document.getElementById('hello');
-        let text3 = document.createElement('p');
-        text.setAttribute('class', 'roundThree');
-        text.innerText = 'We\'ve failed our cause, we must regain our strength';
+        let text3 = document.querySelector('#hello p');
+        text3.innerText = 'Alas! Our long journey has come to an end.'
         hello.appendChild(text3)
         showStatsHuey();
         showStatsFanon();
+        showStatsEnemy();
+    } else {
+        let greeting = document.querySelector('.round2');
+        // greeting.classList.remove('.round2')
+        greeting.style.visibility = 'none';
+        // greeting.innerText = "";
+        let hello = document.getElementById('hello');
+        let text3 = document.createElement('p');
+        text3.innerText = 'He\'s a tough one! APES STRONG TOGETHER'
+        hello.appendChild(text3)
+        showStatsHuey();
+        showStatsFanon();
+        showStatsEnemy();
     }
 }
 
-// figure out modal
+// figure out how to update each enemy stat!!
