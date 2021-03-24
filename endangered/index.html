@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ENDANGERED</h1>
+    <main>
+        <section>
+            <button onclick="start()">START</button>
+            <button>RESET</button>
+        </section>
+        
+        <div id="hello"> 
+            <p></p>
+            <div id="btnContainer">
+                <button id="attackButton" onclick="roundOne()">BEGIN</button>
+                <button id="shelterButton" onclick="roundTwo()">FIND SHELTER</button>
+            </div>
+           
+        </div>
+        <section id="stats">
+            <div>
+                <h2>Red Panda</h2>
+                <p>Name: <span id= "name"></span></p>
+                <p>Exp: <span id= "experience"></span></p>
+                <p>HP: <span id= "currentHP"></span></p>
+                <p>Attack: <span id= "Atk"></span></p>
+            </div>
+            <div>
+                <h2>Red Panda</h2>
+                <p>Name: <span id= "hueyName"></span></p>
+                <p>Exp: <span id= "hueyExp"></span></p>
+                <p>HP: <span id= "hueyCurrentHP"></span></p>
+                <p>Attack: <span id= "hueyAtk"></span></p>
+            </div>
+            <div>
+                <h2>Enemy</h2>
+                <p>Name: <span id= "enemyName"></span></p>
+                <p>HP: <span id= "enemyHP"></span></p>
+                <p>Attack: <span id= "enemyAtk"></span></p>
+            </div>
+        </section>
+    </main>
+<script src="js/script.js"></script>
+</body>
+</html>

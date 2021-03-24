@@ -1,0 +1,80 @@
+* {
+    color: white;
+}
+
+body {
+    background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/07/8-Bit-Backgrounds.jpg);
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 4px 4px rgb(113, 127, 255);
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+  
+#stats{
+    display: flex;
+    flex-flow: row wrap;
+}
+  
+#stats div{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    margin: 0 5px;
+    border: solid 1px white;
+    padding: 10px;
+}
+
+button {
+    color: black;
+}
+
+/* h3 {
+    margin-top: 220px;
+} */
+
+/* #btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+} */
+
+#attackButton {
+    margin: 0;
+    /* top: 90%; */
+    bottom: 10px;
+    left: 21%;
+    transform: translateY(-50%);
+    position: absolute;
+    visibility: hidden;
+}
+
+#shelterButton {
+    margin: 0;
+    /* top: 90%; */
+    bottom: 10px;
+    right: 21%;
+    transform: translateY(-50%);
+    position: absolute;
+    visibility: hidden;
+}
+
+#hello {
+    background-color: rgba(177, 133, 248, 0.295);
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    position: relative;
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    padding: 10px;
+}
