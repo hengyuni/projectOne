@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/07/8-Bit-Backgrounds.jpg);
+    background-image: url(https://wallpapercave.com/wp/wp1879943.png);
     background-size: cover;
 }
 h1 {
@@ -25,7 +25,7 @@ main{
   
 #stats div{
     font-family: 'Press Start 2P', cursive;
-    font-size: 8px;
+    font-size: 6px;
     margin: 0 5px;
     border: solid 1px white;
     padding: 10px;
@@ -49,7 +49,7 @@ button {
     margin: 0;
     /* top: 90%; */
     bottom: 10px;
-    left: 15%;
+    left: 5%;
     transform: translateY(-50%);
     position: absolute;
     visibility: hidden;
@@ -59,7 +59,7 @@ button {
     margin: 0;
     /* top: 90%; */
     bottom: 10px;
-    right: 35%;
+    right: 46%;
     transform: translateY(-50%);
     position: absolute;
     visibility: hidden;
@@ -69,7 +69,17 @@ button {
     margin: 0;
     /* top: 90%; */
     bottom: 10px;
-    right: 11%;
+    right: 24%;
+    transform: translateY(-50%);
+    position: absolute;
+    visibility: hidden;
+}
+
+#runButton {
+    margin: 0;
+    /* top: 90%; */
+    bottom: 10px;
+    right: 5%;
     transform: translateY(-50%);
     position: absolute;
     visibility: hidden;
@@ -93,4 +103,40 @@ img {
     max-width: 20%;
     height: auto;
     text-align: right;
+}
+
+.round2 {
+    visibility: visible;
+}
+
+@media all and (max-width: 600px) {
+    * {
+        color: white;
+    }
+
+    #hello {
+        text-align: center;
+        position: relative;
+        right: 70px;
+        margin: 20px;
+        width: 325px;
+
+    }
+
+    #stats {
+        display: flex;
+        flex-flow: row wrap; 
+    }
+
+    #stats div{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 6px;
+        text-shadow: 2px 2px rgb(59, 67, 141);
+        background-color: rgba(177, 133, 248, 0.541);
+        margin: 0 5px;
+        border: solid 1px white;
+        padding: 10px;
+        justify-content: center;
+    }
+    
 }
