@@ -3,7 +3,7 @@ class redPanda {
     constructor(name) {
         this.name = name;
         this.exp = 0;
-        this.health = 20;
+        this.health = 40;
         this.attack = 5;
     }
     fight(target) {
@@ -24,7 +24,7 @@ class redPanda {
 const fanon = new redPanda ('Fanon')
 const huey = new redPanda ('Huey')
 
-// make a factory for to generate enemies after a round
+// make a factory for to generate enemies after a round?
 
 class enemy {
     constructor(name, health, attack) {
@@ -47,9 +47,9 @@ class enemy {
 
 // const nmePower = [3, 4, 5]
 
-const franco = new enemy('Franco', 10, 5)
-const goebbels = new enemy('Goebbels', 15, 6)
-const pinochet = new enemy('Pinochet', 20, 7)
+const franco = new enemy('Franco', 15, 5)
+const goebbels = new enemy('Goebbels', 20, 6)
+const pinochet = new enemy('Pinochet', 25, 7)
 const creatures = [];
 const names = [franco, goebbels, pinochet]
 let i = 0
@@ -149,7 +149,7 @@ const roundOne = () => {
         // showStatsEnemy();
     } else {
         let hello = document.getElementById('hello');
-        let text1 = document.createElement('p');
+        let text1 = document.querySelector('#hello p');
         text1.innerText = 'That didn\'t even make a scratch. Attack back!'
         // hello.prependChild(text1)
         hello.appendChild(text1)
@@ -182,6 +182,7 @@ const roundTwo = () => {
         huey.gainExp();
         fanon.eat(fanon);
         huey.eat(huey);
+        document.querySelectorAll('.round2').forEach(element => element.style.display = 'none')
         let hello = document.getElementById('hello');
         let text2 = document.querySelector('#hello p');
         text2.setAttribute('class', 'round2')
@@ -256,7 +257,7 @@ const roundThree = () => {
         let hello = document.getElementById('hello');
         // let text3 = document.querySelector('#hello p');
         let text3 = document.createElement('p');
-        text3.innerText = 'He\'s a tough one! APES STRONG TOGETHER'
+        text3.innerText = 'He\'s a tough one! His health is at ' + pinochet.health + '! Hyper Beam!'
         hello.appendChild(text3)
         showStatsHuey();
         showStatsFanon();
