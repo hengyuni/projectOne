@@ -1,16 +1,11 @@
 ## Endangered
 Adventure game about an animal thats on the endangered list seeking for oasis and repopulate in a safe haven.
 
-### code snippet
+### Approach
+Created two classes for protaganist and antaganists. set a function for each round. use dom manipulation to add text and background for each round.
 
-code snippets
-
-### technology's used
-Node.js
-Homebrew
-HTML
-CSS
-Javascript
+### Attempts
+Tried adding animated fighting gifs to set an adventure line, but failed. will work on it more as the cohorts go by.
 
 ### Methods Used
 DOM
@@ -19,10 +14,15 @@ Class
 Objects
 Array methods
 
-### lessons/expectations(what I tried)
+### Technologies used
+MacBook Pro
+Node.js
+Homebrew
+HTML
+CSS
+Javascript
 
-### get link
-make docs folder, go to settings, go to github pages and deploy, deploy out of the docs folder.
+### Conclusions
+Though there is still more bells and whistles I could've added, I feel good for what I was able to do for my skill level. I will be updating it through out the cohort before its portfolio ready.
 
 
-github enterprise to github
