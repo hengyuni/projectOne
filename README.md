@@ -1,6 +1,9 @@
 ## Endangered
 Adventure game about an animal thats on the endangered list seeking for oasis and repopulate in a safe haven.
 
+### Game link
+https://hengyuni.github.io/projectOne/endangered/
+
 ### Approach
 Created two classes for protaganist and antaganists. set a function for each round. use dom manipulation to add text and background for each round.
 
