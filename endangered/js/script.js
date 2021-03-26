@@ -234,6 +234,8 @@ const roundThree = () => {
         // greeting.classList.remove('.round2')
         // greeting.style.display = 'none';
         // document.querySelector('.round2').innerHTML = ""
+        // let background = document.querySelector('body')
+        // background.style.backgroundImage = "url('https://wallpapercave.com/wp/wp1879965.png')"
         document.querySelectorAll('.round2').forEach(element => element.style.display = 'none')
         // greeting.innerText = "";
         let hello = document.getElementById('hello');

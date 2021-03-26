@@ -5,6 +5,8 @@
 body {
     background-image: url(https://wallpapercave.com/wp/wp1879943.png);
     background-size: cover;
+    height: 100vh;
+    width: auto;
 }
 h1 {
     text-align: center;
@@ -101,8 +103,11 @@ p {
 
 img {
     max-width: 20%;
+    left: 0;
+    bottom: 0;
     height: auto;
     text-align: right;
+    position: fixed;
 }
 
 .round2 {
