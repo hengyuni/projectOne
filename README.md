@@ -8,7 +8,7 @@ https://hengyuni.github.io/projectOne/endangered/
 Created two classes for protaganist and antaganists. set a function for each round. use dom manipulation to add text and background for each round.
 
 ### Attempts
-Tried adding animated fighting gifs to set an adventure line, but failed. will work on it more as the cohorts go by.
+Tried adding animated fighting gifs to set an adventure line, but failed. will work on it more as the course go by.
 
 ### Methods Used
 DOM
